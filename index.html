@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Koalamochi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐨</text></svg>">
+</head>
+<body>
+<div id="device">
+  <header id="topbar">
+    <div class="name-wrap">
+      <div id="pet-name">Mochi</div>
+      <div class="lvl-row"><span id="lvl-badge">Lv 1</span><span id="stage">Baby</span></div>
+      <div class="xpbar"><div id="xp-fill"></div><span id="xp-text"></span></div>
+    </div>
+    <div class="top-right">
+      <div class="coin-pill">🪙 <span id="coin-count">0</span></div>
+      <div class="icon-btns">
+        <button id="btn-music" class="icon-btn" title="Volume">🎵</button>
+        <button id="btn-settings" class="icon-btn" title="Settings">⚙️</button>
+      </div>
+      <div id="vol-pop" class="hidden"></div>
+    </div>
+  </header>
+
+  <section id="stats">
+    <div class="stat" data-stat="hunger" title="Hunger"><span class="stat-ico">🍓</span><div class="meter"><div class="fill"></div></div></div>
+    <div class="stat" data-stat="happy" title="Happiness"><span class="stat-ico">💖</span><div class="meter"><div class="fill"></div></div></div>
+    <div class="stat" data-stat="energy" title="Energy"><span class="stat-ico">⚡</span><div class="meter"><div class="fill"></div></div></div>
+    <div class="stat" data-stat="clean" title="Cleanliness"><span class="stat-ico">🫧</span><div class="meter"><div class="fill"></div></div></div>
+  </section>
+
+  <main id="room">
+    <div id="room-bg"><div class="wall"></div><div class="floor"></div></div>
+    <div class="window-deco"></div>
+    <div id="shelf"></div>
+    <div class="rug"></div>
+    <div id="pet-wrap"><div id="speech" class="hidden"></div><div id="pet"></div></div>
+    <div id="messes"></div>
+    <div id="night"></div>
+  </main>
+
+  <nav id="actions">
+    <button data-act="feed"><span>🍙</span>Feed</button>
+    <button data-act="play"><span>🎮</span>Play</button>
+    <button data-act="clean"><span>🧽</span>Clean</button>
+    <button data-act="sleep"><span>🌙</span><em>Sleep</em></button>
+    <button data-act="shop"><span>🛍️</span>Shop</button>
+    <button data-act="closet"><span>🎀</span>Closet</button>
+  </nav>
+
+  <div id="modal" class="hidden">
+    <div class="sheet">
+      <div class="sheet-head"><h2 id="modal-title"></h2><button class="close-btn" id="modal-close">✕</button></div>
+      <div id="modal-tabs"></div>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <div id="game" class="hidden">
+    <div class="game-head"><button class="close-btn" id="game-quit">✕</button><div id="game-title"></div><div id="game-hud"></div></div>
+    <div id="game-area"></div>
+  </div>
+
+  <div id="toasts"></div>
+</div>
+<audio id="bgm" loop preload="auto"></audio>
+<script src="game.js"></script>
+</body>
+</html>
